@@ -6,7 +6,7 @@ function toggleMobileMenu() {
 }
 
 
-// Add event listeners to menu items
+// Add event listeners to menu items for closing the menu after clicking
 function setupMenuItemListeners() {
     // Get all menu items
     const menuItems = document.querySelectorAll("#menu .menu-item"); // Adjust the selector to match your menu items
