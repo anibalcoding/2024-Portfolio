@@ -4,6 +4,26 @@ function toggleMobileMenu() {
     document.getElementById("menu").classList.toggle("active");
 
 }
+
+
+// Add event listeners to menu items
+function setupMenuItemListeners() {
+    // Get all menu items
+    const menuItems = document.querySelectorAll("#menu .menu-item"); // Adjust the selector to match your menu items
+
+    // Add click event listener to each menu item
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            toggleMobileMenu(); // Close the menu
+        });
+    });
+}
+
+// Initialize menu item listeners when the page loads
+document.addEventListener("DOMContentLoaded", setupMenuItemListeners);
+
+
+
 // Modal Code 
 const modalContainer = document.getElementById('modal-container');
 const modalTriggers = document.querySelectorAll('.pokemon-modal');
@@ -31,7 +51,7 @@ modalContainer.addEventListener('click', function(event) {
     }
 });
 
-// ** New Code **
+
 // Prevent modal close when clicking on the link
 const modalLink = document.querySelector('#modal-container a');
 if (modalLink) {
@@ -41,7 +61,7 @@ if (modalLink) {
 }
 
 
-//  test code for new modal
+//  Reapated code for leno modal. find a way to fix the repeated code.
 const modalContainerNew = document.getElementById('modal-container-new');
 const modalTriggersNew = document.querySelectorAll('.leno-modal');
 const bodyNew = document.body;
@@ -68,7 +88,7 @@ modalContainerNew.addEventListener('click', function(event) {
     }
 });
 
-// ** New Code **
+
 // Prevent modal close when clicking on the link
 const modalLinkNew = document.querySelector('#modal-container-new a');
 if (modalLinkNew) {
