@@ -471,13 +471,14 @@ h3 {
         gap: 30px;
         @media (max-width: 1024px) {
             flex-direction: column;
+            
         }
 
         article {
             background-color: white;
             padding: 30px;
             border-radius: 30px;
-            line-height: 1.8;
+            line-height: 1.6;
             flex: 1;
             h3 {
                 margin-top: 20px;
@@ -492,7 +493,7 @@ h3 {
 
             p {
                 margin-bottom: 10px;
-                font-size: 10px;
+                font-size: .9rem;
             }
 
            
