@@ -98,3 +98,42 @@ if (modalLinkNew) {
 }
 
 
+// repeated code for anime modal
+
+const modalContainerAnime = document.getElementById('modal-container-3');
+const modalTriggersAnime = document.querySelectorAll('.anime-modal');
+const bodyAnime = document.body;
+
+// Add click event listeners to each trigger to open the modal
+modalTriggersAnime.forEach(function(trigger) {
+    trigger.addEventListener('click', function() {
+        const buttonId3 = this.id;
+        modalContainerAnime.className = ''; // Clear existing classes
+        modalContainerAnime.classList.add(buttonId3); // Add class matching button ID
+        bodyAnime.classList.add('modal-active');
+    });
+});
+
+// Add click event listener to the modal container to close the modal
+modalContainerAnime.addEventListener('click', function(event) {
+    if (
+        event.target === modalContainerAnime ||
+        event.target.classList.contains('modal-background') ||
+        event.target.classList.contains('close-modal')
+    ) {
+        modalContainerAnime.classList.add('out'); // Add 'out' class to fade out animation
+        bodyAnime.classList.remove('modal-active'); // Remove 'modal-active' class from body
+    }
+});
+
+
+// Prevent modal close when clicking on the link
+const modalLink3 = document.querySelector('#modal-container-3 a');
+if (modalLink3) {
+    modalLink3.addEventListener('click', function(event) {
+        event.stopPropagation(); // Stop the event from bubbling up to the modal container
+    });
+}
+
+
+

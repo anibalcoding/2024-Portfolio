@@ -646,7 +646,7 @@ video:hover {
 }
 /* styling for animation on modal git hub and live link */
 
-#modal-container, #model-container-new, .link-animation:hover {
+#modal-container, #model-container-new,#modal-container-3 .link-animation:hover {
     transform: rotate(180deg) ; 
     
               
@@ -1252,6 +1252,10 @@ li {
           
         }
 
+        /* styline for anime modal */
+
+        
+
 /* Modal Tech Section */
 
 .modal-tech-section {
@@ -1311,11 +1315,305 @@ li {
     }
   }
 
+  #modal-container-3 { 
+    overflow:hidden;
+    position:fixed;
+    display:table;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    margin: 0 auto;
+    transform:scale(0);
+    z-index:1;
+    &.one {
+      transform:scaleY(.01) scaleX(0);
+      animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      .modal-background {
+        .modal {
+          transform:scale(0);
+          animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+      &.out {
+        transform:scale(1);
+        animation:unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        .modal-background {
+          .modal {
+            animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          }
+        }
+      }
+    }
+    &.two {
+      transform:scale(1);
+      .modal-background {
+        background:rgba(0,0,0,.0);
+        animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        .modal {
+          opacity:0;
+          animation: scaleUp .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+      + .content {
+        animation: scaleBack .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      }
+      &.out {
+        animation: quickScaleDown 0s .5s linear forwards;
+        .modal-background {
+          animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          .modal {
+             animation: scaleDown .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          }
+        }
+        + .content {
+          animation: scaleForward .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+    }
+    &.three {
+      z-index:0;
+      transform:scale(1);
+      .modal-background {
+        background:rgba(0,0,0,.6);
+        .modal {
+          animation: moveUp .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+      + .content {
+        z-index:1;
+        animation: slideUpLarge .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      }
+      &.out {
+        .modal-background {
+          .modal {
+            animation: moveDown .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          }
+        }
+        + .content {
+          animation: slideDownLarge .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+    }
+    &.four {
+      z-index:0;
+      transform:scale(1);
+      .modal-background {
+        background:rgba(0,0,0,.7);
+        .modal {
+          animation: blowUpModal .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+      + .content {
+        z-index:1;
+        animation:blowUpContent .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      }
+      &.out {
+        .modal-background {
+          .modal {
+            animation: blowUpModalTwo .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          }
+        }
+        + .content {
+          animation: blowUpContentTwo .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+    }
+    &.five {
+      transform:scale(1);
+      .modal-background {
+        background:rgba(0,0,0,.0);
+        animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        .modal {
+          transform:translateX(-1500px);
+          animation: roadRunnerIn .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+      &.out {
+        animation: quickScaleDown 0s .5s linear forwards;
+        .modal-background {
+          animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          .modal {
+            animation: roadRunnerOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          }
+        }
+      }
+    }
+    &.six {
+      transform:scale(1);
+      .modal-background {
+        background:rgba(0,0,0,.0);
+        animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        .modal {
+          background-color:transparent;
+          animation: modalFadeIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          h2,p, img,ul {
+            opacity:0;
+            position:relative;
+            animation: modalContentFadeIn .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          }
+          .modal-svg {
+            rect {
+              animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            }
+          }
+        }
+      }
+      &.out {
+        animation: quickScaleDown 0s .5s linear forwards;
+        .modal-background {
+          animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          .modal {
+            animation: modalFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            h2,p, img, ul {
+              animation: modalContentFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            }
+            .modal-svg {
+              rect {
+                animation: sketchOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.seven {
+      transform:scale(1);
+      .modal-background {
+        background:rgba(0,0,0,.0);
+        animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        .modal {
+          height:75px;
+          width:75px;
+          border-radius:75px;
+          overflow:hidden;
+          animation: bondJamesBond 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          h2,p, img {
+            opacity:0;
+            position:relative;
+            animation: modalContentFadeIn .5s 1.4s linear forwards;
+           
+          }
+        }
+      }
+      &.out {
+        animation: slowFade .5s 1.5s linear forwards;
+        .modal-background {
+          background-color:rgba(0,0,0,.7);
+          animation: fadeToRed 2s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          .modal {
+            border-radius:3px;
+            height:162px;
+            width:227px;
+            animation: killShot 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            h2,p, img {
+              animation:modalContentFadeOut .5s .5 cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            }
+          }
+        }
+      }
+    }
+    .modal-background {
+      display:table-cell;
+      background:rgba(0,0,0,.8);
+      text-align:center;
+      vertical-align:middle;
+      .modal {   
+        background:white;
+        padding:50px;
+        display:inline-block;
+        border-radius:3px;
+        font-weight:300px;
+        position:relative;
+        width: 700px;
+        height: 500px;
+       
+        .modal-image {  
+          margin-top: -1.5rem;            
+          width: 450px;          
+        }
+        h2 {
+          font-size:25px;
+          /* line-height:25px; */
+         margin-top: -4rem;
+        }
+        article {
+            
+          font-size:12px;
+          line-height:22px;
+          
+        }
+
+      
+    
+
+
+
+    .modal-tech-section {
+      box-shadow: gray 0px 0px 10px;
+      margin-top: -9px;
+      border: 1px solid black;
+      padding: 4px;
+      display: flex;
+      width: 100%; 
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+  }
+  
+  ul {   
+      display: grid;
+      grid-template-columns: 1fr 1fr;   
+      list-style-type: none;
+      gap: 10px;
+  }
+  
+  li {
+      display: inline-block;   
+  }
+     
+  /* Modal close button */
+  .close-modal {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+      z-index: 1000;
+      }
+  
+      
+  /* Modal SVG styling */
+          .modal-svg {
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            border-radius:3px;
+            rect {
+              stroke: #fff;
+              stroke-width: 2px;
+              stroke-dasharray: 778;
+              stroke-dashoffset: 778;
+            }
+          }
+        }
+      }
+    }
+  
+
+
+
 
 /* styling for responsive modal */
 
 @media (max-width: 768px) {
-    #modal-container-new, #modal-container {
+    #modal-container-new, #modal-container, #modal-container-3 {
        
         .modal-background {
             
