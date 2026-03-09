@@ -12,6 +12,24 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title: 'REV Robotics Global Website',
+      description: 'An E-Commerce Marketplace built with BigCommerce. This site has features such as multi-currency, dynamic shipping rates for global orders, integration with Erp applications for product logistics, and custom scripts. ',
+      image: '/imgs/revweb.png',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'BigCommerce', 'Odoo','Shipper HQ', 'Stripe'],
+      liveUrl: 'https://www.revrobotics.global/',
+      hasVideo: false
+    },
+    {
+      id: 5,
+      title: 'Steambotics E-Commerce Website',
+      description: 'A web application built with Next.js that handles server-side requests to dynamically fetch and display data. Features Framer Motion animations and server-side rendering.',
+      image: '/imgs/steambotics.png',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Next.js'],
+      liveUrl: 'https://steambotics.ca/',
+      hasVideo: false
+    },
+    {
+      id: 2,
       title: 'Leno App Project',
       description: 'A responsive marketing website for the Leno App, developed using HTML, CSS, and JavaScript. Features clean, modern design with BEM methodology and mobile-first responsive design.',
       image: '/imgs/leno.png',
@@ -22,7 +40,7 @@ const Projects = () => {
       hasVideo: true
     },
     {
-      id: 2,
+      id: 3,
       title: 'Pokemon API Project',
       description: 'This project utilizes the PokéAPI to dynamically generate cards for the original 150 Pokémon. Each card displays the Pokémon\'s image, name, number, and type with dynamic background colors.',
       image: '/imgs/pokemon.png',
@@ -32,7 +50,7 @@ const Projects = () => {
       hasVideo: false
     },
     {
-      id: 3,
+      id: 4,
       title: 'Anime Vault Project',
       description: 'A web application built with Next.js that handles server-side requests to dynamically fetch and display data. Features Framer Motion animations and server-side rendering.',
       image: '/imgs/animewebsite.png',
@@ -42,15 +60,15 @@ const Projects = () => {
       hasVideo: false
     },
     {
-      id: 4,
-      title: 'REV Robotics Global Website',
-      description: 'An E-Commerce Marketplace built with BigCommerce. This site has features such as multi-currency, dynamic shipping rates for global orders, integration with Erp applications for product logistics, and custom scripts. ',
-      image: '/imgs/animewebsite.png',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'BigCommerce', 'Odoo','Shipper HQ', 'Stripe'],
-      githubUrl: 'https://github.com/anibalcoding/Anime-Vault-Project',
-      liveUrl: 'https://anime-vault-project.vercel.app/',
+      id: 6,
+      title: 'DJShutitdown Website',
+      description: 'A Website built on Html, Css, and JavaScript. Includes a booking system, interactive elements, and responsive design to create an engaging user experience.',
+      image: '/imgs/Djwebsite.png',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+      githubUrl: 'https://github.com/anibalcoding/DJ-website',
+      liveUrl: 'https://www.djshutitdown.com/',
       hasVideo: false
-    },
+    }
   ]
 
   const containerVariants = {
@@ -184,6 +202,7 @@ const Projects = () => {
             <a
               href="mailto:anibalcoding@gmail.com"
               className="btn-primary inline-flex items-center space-x-2"
+              
             >
               <span>Get In Touch</span>
               <ExternalLink size={20} />
@@ -212,7 +231,7 @@ export interface Project {
   image: string
   video?: string
   technologies: string[]
-  githubUrl: string
+  githubUrl?: string
   liveUrl: string
   hasVideo: boolean
 }

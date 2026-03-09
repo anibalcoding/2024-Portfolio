@@ -14,11 +14,13 @@ const WorkExperience = () => {
       location: 'Remote',
       description: 'As an eCommerce Web Specialist at REV Robotics, I design, develop, and maintain high-performing online storefronts using BigCommerce, JavaScript, HTML, and CSS. My role spans front-end development, UX enhancements, and merchandising strategy to ensure a seamless shopping experience. I work closely with cross-functional teams to support product launches and marketing campaigns, while leveraging analytics and performance data to optimize site speed, usability, and conversions.',
       image: '/imgs/rev.jpg',
-      technologies: ['BigCommerce', 'JavaScript', 'HTML', 'CSS', 'UX/UI', 'Analytics'],
+      technologies: ['BigCommerce', 'JavaScript', 'HTML', 'CSS', 'UX/UI', 'Analytics', 'Odoo'],
       achievements: [
-        'Increased conversion rate by 25% through UX improvements',
-        'Reduced page load time by 35% through optimization',
-        'Managed 50+ product launches successfully'
+        'Created and merchandised 500+ products, enabling faster global rollout and consistency across regions',
+        'Integrated and synced new BigCommerce applications, improving site functionality and operational efficiency',
+        'Optimized global site settings to support 20+ countries, driving international accessibility and customer reach',
+        'Enhanced website integrity and performance, achieving a 12% faster load time and improved user experience',
+        'Implemented Odoo ERP integration to connect global warehouses with inventory, streamlining supply chain visibility and fulfillment',
       ]
     },
     {

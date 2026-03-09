@@ -78,15 +78,17 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               {project.title}
             </h2>
             <div className="flex justify-center space-x-4">
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-200"
-              >
-                <Github size={20} />
-                <span>GitHub</span>
-              </a>
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-200"
+                >
+                  <Github size={20} />
+                  <span>GitHub</span>
+                </a>
+              )}
               <a
                 href={project.liveUrl}
                 target="_blank"
@@ -94,7 +96,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 className="inline-flex items-center space-x-2 text-secondary-400 hover:text-secondary-300 transition-colors duration-200"
               >
                 <ExternalLink size={20} />
-                <span>Live Demo</span>
+                <span>Live Website</span>
               </a>
             </div>
           </div>

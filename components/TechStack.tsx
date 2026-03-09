@@ -12,10 +12,11 @@ const TechStack = () => {
     { name: 'Next.js', icon: '/imgs/nextjs.png' },
     { name: 'VS Code', icon: '/imgs/vscode.png' },
     { name: 'Azure', icon: '/imgs/azure.png' },
-    { name: 'Python', icon: '/imgs/python.png' },
+    { name: 'Tailwind', icon: '/imgs/tailwind.png' },
     { name: 'Node.js', icon: '/imgs/nodejs.png' },
     { name: 'TypeScript', icon: '/imgs/typescript.png' },
   ]
+  
 
   return (
     <section className="py-12 bg-gradient-to-r from-primary-900/20 to-secondary-900/20">
@@ -31,8 +32,7 @@ const TechStack = () => {
             Technologies I Work With
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            A comprehensive toolkit of modern technologies and frameworks for building 
-            scalable, performant web applications
+            A comprehensive toolkit of modern technologies I've used throught my career. 
           </p>
         </motion.div>
 

@@ -100,12 +100,15 @@ const Skills = () => {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <span
+                    <motion.span
                       key={skill}
                       className="px-3 py-1 bg-white/10 rounded-full text-sm text-white/80 border border-white/20 hover:border-primary-400/50 transition-colors duration-200"
+                      whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.2)" }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 300 }}
                     >
                       {skill}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </motion.div>
